@@ -7,6 +7,23 @@
   pointer-events: none;
 }
 
+button{
+  margin: 0 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(230, 230, 230);
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  color: rgb(70, 70, 70);
+  transition: all 0.3s ease;
+}
+
+button:hover{
+  background-color: rgb(200, 200, 200);
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
