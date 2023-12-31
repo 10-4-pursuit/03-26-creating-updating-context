@@ -11,7 +11,10 @@ function App() {
 
   // Function to change the user's name
   function changeName() {
-    setUser({ ...user, name: "Jane Doe" });
+    setUser(previousUser =>  ({ 
+      ...previousUser, 
+      name: previousUser.name === "John Doe" ? "Jane Doe" : "John Doe"
+    }));
   };
 
   return (
@@ -21,8 +24,8 @@ function App() {
         <UserContext.Provider value={user}>
           {/* UserProfile component displays user data */}
           <UserProfile />
-          {/* Button to change the user's name */}
-          <button onClick={changeName}>Change Name</button>
+          {/* Button toggle between changing the user's name */}
+          <button onClick={changeName}>Change User's Name</button>
         </UserContext.Provider>
       </header>
     </div>
