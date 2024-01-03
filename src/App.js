@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import UserContext from './UserContext';
+import UserProfile from './UserProfile';
 
 function App() {
+  const [user, setUser] = useState({
+    name: 'John Doe',
+    age: 30,
+  });
+
+  
+  // const [isOriginalName, setIsOriginalName] = useState(true)
+
+  const handleChangeName = () => {
+    // setUser({ ...user, name: isOriginalName ? 'Jane Doe' : 'John Doe' });
+    setUser({ ...user, name: 'Jane Doe' });
+    // setIsOriginalName(!isOriginalName);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    // <UserContext.Provider value={{ user, isOriginalName }}>
+    <UserContext.Provider value={user}>
+      <UserProfile />
+      <button onClick={handleChangeName}>Change Name</button>
+    </UserContext.Provider>
   );
 }
 

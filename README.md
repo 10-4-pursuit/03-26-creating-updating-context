@@ -18,7 +18,7 @@ Learn to create and dynamically update a Context in React. Understand how change
 
 4. **Initial Setup**:
    - Change to the exercise directory: `cd 03-26-creating-updating-context`.
-   - Run `npm install` to install dependencies.
+   - Run `npm install` to install dependencies
 
 ## Exercise Instructions
 
