@@ -2,18 +2,13 @@ import React, { useContext } from 'react';
 import UserContext from './UserContext';
 
 const UserProfile = () => {
-  const { user } = useContext(UserContext);
-
-
-//   const isOriginalName = useContext(UserContext).isOriginalName;
-  
+  const { name, age } = useContext(UserContext);
 
   return (
     <div>
-      <h2>User Profile</h2>
-      {/* <p>Name: {isOriginalName ?  'John Doe' : 'Jane Doe' }</p>  */}
-      <p>Name: {user.name}</p>
-      <p>Age: {user.age}</p>
+      <h2 style={{color: "red"}}>User Profile</h2>
+      <p style={{color: "red"}}>Name: {name}</p>
+      <p style={{color: "red"}}>Age: {age}</p>
     </div>
   );
 };

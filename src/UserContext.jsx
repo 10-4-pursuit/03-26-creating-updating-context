@@ -1,8 +1,9 @@
 import React, { createContext } from 'react';
 
-const UserContext = React.createContext({
-  name: 'John Doe',
-  age: 30
+const UserContext = createContext({
+  name: 'Martian Manhunter',
+  age: 3000,
+  height: '5 ft'
 });
 
 export default UserContext
