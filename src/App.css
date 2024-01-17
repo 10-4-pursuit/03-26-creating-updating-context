@@ -7,6 +7,20 @@
   pointer-events: none;
 }
 
+.home {
+  background-color: blue;
+  color: cyan;
+  text-align: center;
+  font-weight: 900;
+
+}
+
+button {
+  color: red;
+  font-variant: small-caps;
+  font-weight: 500
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
