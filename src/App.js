@@ -1,14 +1,17 @@
-import React from "react";
+import React, {useState} from "react";
 import "./App.css";
-import UserContextProvider from "./components/UserContextProvider";
+import UserProvider from "./components/UserProvider";
 import UserProfile from "./components/UserProfile";
+import ChangeUserName from "./components/ChangeUserName";
 
 function App() {
+
   return (
     <div>
-    <UserContextProvider>
-      <UserProfile />
-    </UserContextProvider>
+      <UserProvider>
+        <UserProfile />
+        <ChangeUserName />
+      </UserProvider>
     </div>
   );
 }
