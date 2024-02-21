@@ -1,7 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
+import React, { useState, useContext } from 'react';
+import UserContext from './UserContext';
+import UserProfile from './UserProfile';
+import UserProvider from './UserProvider';
+import ChangeUserName from './ChangeUserName';
 
 function App() {
+
   return (
     <div className="App">
       <header className="App-header">
@@ -9,6 +15,10 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
+        <UserProvider>
+          <UserProfile />
+          <ChangeUserName />
+        </UserProvider>
         <a
           className="App-link"
           href="https://reactjs.org"
